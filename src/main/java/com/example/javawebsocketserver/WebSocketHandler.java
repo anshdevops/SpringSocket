@@ -1,5 +1,6 @@
 package com.example.javawebsocketserver;
 
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
@@ -32,11 +33,24 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
             default:
                 System.out.println(msg);
                 System.out.println(session.getId());
+                System.out.println();
 
 
 
                 break;
         }
-        System.out.println(msg);
+
+
+
+
+
+
+
+        }
+
+    @Override
+    public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+        super.afterConnectionClosed(session, status);
+
     }
 }
