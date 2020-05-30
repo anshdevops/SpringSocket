@@ -26,8 +26,16 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
                 System.out.println("Fox button was pressed");
                 session.sendMessage(new TextMessage("Fraka-kaka-kaka"));
                 break;
+
+
+
             default:
-                System.out.println("Connected to Client");
+                System.out.println(msg);
+                System.out.println("default executed");
+
+
+                break;
         }
+        System.out.println(msg);
     }
 }
