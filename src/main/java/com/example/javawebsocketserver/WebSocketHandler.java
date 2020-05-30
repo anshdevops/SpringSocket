@@ -31,6 +31,7 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
 
             default:
                 System.out.println(msg);
+                session.getId();
                 System.out.println("default executed");
 
 
