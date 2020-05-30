@@ -51,6 +51,14 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
     @Override
     public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
         super.afterConnectionClosed(session, status);
+        System.out.println("Connection IS Closed for session ID :"+session.getId());
 
+
+    }
+
+    @Override
+    public void afterConnectionEstablished(WebSocketSession session) throws Exception {
+        super.afterConnectionEstablished(session);
+        System.out.println("Connection IS Etablished for session ID :"+session.getId());
     }
 }
